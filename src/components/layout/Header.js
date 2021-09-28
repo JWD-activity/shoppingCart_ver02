@@ -9,10 +9,6 @@ import ListItemText from '@mui/material/ListItemText';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-const styles = (theme) => ({
-  ul: {},
-});
-
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     right: -7,
