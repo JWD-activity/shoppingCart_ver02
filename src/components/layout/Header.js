@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withStyles } from '@mui/styles';
+import { styled } from '@mui/styles';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,6 +13,14 @@ const styles = (theme) => ({
   ul: {},
 });
 
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -7,
+    top: 13,
+    padding: '0 4px',
+  },
+}));
+
 export class Header extends Component {
   render() {
     return (
@@ -24,12 +32,9 @@ export class Header extends Component {
           <nav aria-label='main menu'>
             <List sx={{ display: 'flex' }}>
               <ListItem>
-                <ListItemText>
-                  Cart
-                  <Badge badgeContent={4} color='warning'>
-                    <ShoppingCartOutlinedIcon color='white' />
-                  </Badge>
-                </ListItemText>
+                <StyledBadge badgeContent={4} color='warning'>
+                  <ShoppingCartOutlinedIcon color='white' />
+                </StyledBadge>
               </ListItem>
               <ListItem>
                 <ListItemText>SignIn</ListItemText>
@@ -42,4 +47,4 @@ export class Header extends Component {
   }
 }
 
-export default withStyles(styles)(Header);
+export default Header;
