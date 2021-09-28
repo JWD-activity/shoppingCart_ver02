@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@mui/styles';
 import Typography from '@mui/material/Typography';
 
-const useStyles = (theme) => ({
+const styles = (theme) => ({
   root: {
     color: theme.palette.text.primary,
   },
@@ -24,4 +24,4 @@ class Footer extends Component {
   }
 }
 
-export default withStyles(useStyles)(Footer);
+export default withStyles(styles)(Footer);

@@ -11,14 +11,15 @@ const theme = createTheme({
     },
   },
   palette: {
-    primary: { main: 'hsl(277, 64%, 61%)' },
-    secondary: { main: 'hsl(0, 0%, 100%)' },
+    primary: { main: '#8959C2' },
+    secondary: { main: '#1B1938' },
+    warning: { main: '#ff9800', contrastText: '#1B1938' },
     text: {
-      primary: 'hsl(227, 12%, 61%)',
+      primary: '#9095A7',
       secondary: 'hsla(0, 0%, 100%, 0.6)',
     },
     background: {
-      default: 'hsl(244, 38%, 16%)',
+      default: '#F7F8FD',
     },
   },
 
@@ -27,26 +28,18 @@ const theme = createTheme({
     fontSize: 15,
     fontWeightRegular: 400,
     fontWeightMedium: 700,
-    h3: { fontWeight: 700 },
-    h4: { fontWeight: 700 },
+    h6: { fontWeight: 400 },
     body1: {
       fontSize: 15,
     },
   },
   spacing: 10,
-  overrides: {
-    MuiCard: {
-      root: {
-        backgroundColor: 'hsl(244, 38%, 16%)',
-        borderRadius: '.5rem',
-        boxShadow: 'none',
-      },
-    },
-    MuiContainer: {
-      root: {
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+        },
       },
     },
   },
