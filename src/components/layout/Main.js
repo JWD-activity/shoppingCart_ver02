@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Product from './Product';
+import Product from '../Product';
+
 import { Container, Typography } from '@mui/material';
 
 export class Main extends Component {
   render() {
-    console.log('Main:', this.props.products);
     return (
       <main>
         <Grid container columns={12}>
@@ -26,7 +26,14 @@ export class Main extends Component {
               })}
             </Grid>
           </Grid>
-          <Grid container item xs={12} md={4}></Grid>
+          <Grid container item xs={12} md={4} direction='column'>
+            <Grid container item>
+              <Typography variant='h6' component='h1'>
+                Cart Items
+              </Typography>
+            </Grid>
+            <Grid item>{this.props.children}</Grid>
+          </Grid>
         </Grid>
       </main>
     );
