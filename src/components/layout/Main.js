@@ -9,9 +9,9 @@ export class Main extends Component {
     return (
       <main>
         <Grid container columns={12}>
-          <Grid container item xs={8}>
+          <Grid container item md={12} lg={8}>
             <Grid container item>
-              <Typography variant='h4' component='h1'>
+              <Typography variant='h5' component='h1'>
                 Products
               </Typography>
             </Grid>
@@ -25,8 +25,8 @@ export class Main extends Component {
               })}
             </Grid>
           </Grid>
-          <Grid container item xs={4}>
-            <Typography variant='h4' component='h1'>
+          <Grid container item md={12} lg={4}>
+            <Typography variant='h5' component='h1'>
               Basket
             </Typography>
           </Grid>

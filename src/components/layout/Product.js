@@ -11,7 +11,7 @@ export class Product extends Component {
     const { name, price, image } = this.props.product;
 
     return (
-      <Card sx={{ maxWidth: 300 }}>
+      <Card sx={{ minWidth: 250 }}>
         <CardMedia component='img' alt={name} height='140' image={image} />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
