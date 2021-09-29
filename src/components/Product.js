@@ -5,7 +5,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import { minHeight } from '@mui/system';
 
 export class Product extends Component {
   render() {
@@ -17,7 +16,7 @@ export class Product extends Component {
           component='img'
           alt={name}
           image={image}
-          sx={{ maxWidth: 200, minHeight: 150 }}
+          sx={{ minWidth: '100%', minHeight: 150 }}
         />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
