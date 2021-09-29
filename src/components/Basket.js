@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 const styles = {
   root: {
     backgroundColor: '#F7F8FD',
+    borderRadius: 5,
+    padding: '1rem',
   },
 };
 
