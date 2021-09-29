@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './assets/style/theme';
 
-import Container from '@mui/material/Container';
+// import Container from '@mui/material/Container';
 import Header from './components/layout/Header';
 import Main from './components/layout/Main';
 import Footer from './components/layout/Footer';
