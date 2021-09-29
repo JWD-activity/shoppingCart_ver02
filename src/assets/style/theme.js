@@ -28,6 +28,19 @@ const theme = createTheme({
     fontSize: 15,
     fontWeightRegular: 400,
     fontWeightMedium: 700,
+    h1: {
+      fontFamily: "'Inter', 'sans-serif'",
+      fontSize: '1.3rem',
+      fontWeight: 700,
+    },
+    h2: {
+      fontSize: '1.3rem',
+      fontWeight: 700,
+    },
+    h3: {
+      fontSize: '1.3rem',
+      fontWeight: 400,
+    },
     h6: { fontWeight: 400 },
     body1: {
       fontSize: 15,
@@ -39,6 +52,13 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           boxShadow: 'none',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          color: '#212121',
         },
       },
     },

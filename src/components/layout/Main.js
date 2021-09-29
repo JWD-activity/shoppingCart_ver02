@@ -19,12 +19,16 @@ export class Main extends Component {
   render() {
     return (
       <main>
-        <Grid container columns={12}>
+        <Grid
+          container
+          columns={12}
+          sx={{
+            rowGap: '2rem',
+          }}
+        >
           <Grid container item md={12} lg={8} direction='column'>
-            <Grid container item>
-              <Typography variant='h6' component='h1'>
-                Products
-              </Typography>
+            <Grid container item mb={1}>
+              <Typography variant='h1'>Products</Typography>
             </Grid>
             <Grid
               container
@@ -47,7 +51,7 @@ export class Main extends Component {
           </Grid>
           <Grid container item md={12} lg={4} direction='column'>
             <Grid container item>
-              <Typography variant='h6' component='h1'>
+              <Typography variant='h1' mb={1}>
                 Cart Items
               </Typography>
             </Grid>

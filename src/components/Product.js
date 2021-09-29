@@ -16,16 +16,22 @@ export class Product extends Component {
           component='img'
           alt={name}
           image={image}
-          sx={{ minWidth: '100%', minHeight: 150 }}
+          sx={{ minWidth: '100%', minHeight: 160 }}
         />
         <CardContent>
-          <Typography gutterBottom variant='h5' component='div'>
+          <Typography gutterBottom variant='h2' component='div'>
             {name}
           </Typography>
-          <Typography variant='body2'>${price}</Typography>
+          <Typography variant='h3'>${price}</Typography>
         </CardContent>
         <CardActions>
-          <Button variant='contained'>Add to Cart</Button>
+          <Button
+            variant='contained'
+            disableElevation
+            sx={{ margin: '0 auto', width: '100%' }}
+          >
+            Add to Cart
+          </Button>
         </CardActions>
       </Card>
     );
