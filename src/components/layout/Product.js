@@ -5,14 +5,20 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import { minHeight } from '@mui/system';
 
 export class Product extends Component {
   render() {
     const { name, price, image } = this.props.product;
 
     return (
-      <Card sx={{ minWidth: 250 }}>
-        <CardMedia component='img' alt={name} height='140' image={image} />
+      <Card>
+        <CardMedia
+          component='img'
+          alt={name}
+          image={image}
+          sx={{ maxWidth: 200, minHeight: 150 }}
+        />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
             {name}
