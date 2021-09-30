@@ -3,6 +3,7 @@
 
 ## Description
 ### The challenge
+- Implementing a shopping cart by using class components of React.
 - The purpose of this app is to display a list of products, and when the user selects the product to order, the app displays the product price, delivery price (free shipping if it is $2,000 or more), taxes, and total price.
 
 ## My process
