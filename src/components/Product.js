@@ -29,6 +29,9 @@ export class Product extends Component {
             variant='contained'
             disableElevation
             sx={{ margin: '0 auto', width: '100%' }}
+            onClick={() => {
+              this.props.onAdd(this.props.product);
+            }}
           >
             Add to Cart
           </Button>

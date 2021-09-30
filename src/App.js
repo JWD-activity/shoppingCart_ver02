@@ -33,7 +33,9 @@ class App extends Component {
         ),
       });
     } else {
-      this.setState([...this.state.cartItems, { ...product, qty: 1 }]);
+      this.setState({
+        cartItems: [...this.state.cartItems, { ...product, qty: 1 }],
+      });
     }
   }
 
@@ -62,7 +64,11 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <Header />
         <Main products={products} onAdd={this.onAdd}>
-          <Basket onAdd={this.onAdd} onRemove={this.onRemove} />
+          <Basket
+            onAdd={this.onAdd}
+            onRemove={this.onRemove}
+            cartItems={this.state.cartItems}
+          />
         </Main>
         <Footer author='JINOK' />
       </ThemeProvider>

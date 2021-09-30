@@ -43,7 +43,7 @@ export class Main extends Component {
               {this.props.products.map((product) => {
                 return (
                   <Grid item key={product.id} sm={10} md={3}>
-                    <Product product={product} />
+                    <Product product={product} onAdd={this.props.onAdd} />
                   </Grid>
                 );
               })}
