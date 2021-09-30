@@ -62,7 +62,7 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <Header />
+        <Header countCartItems={this.state.cartItems.length} />
         <Main products={products} onAdd={this.onAdd}>
           <Basket
             onAdd={this.onAdd}

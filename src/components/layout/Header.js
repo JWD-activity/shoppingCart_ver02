@@ -28,7 +28,10 @@ export class Header extends Component {
           <nav aria-label='main menu'>
             <List sx={{ display: 'flex' }}>
               <ListItem>
-                <StyledBadge badgeContent={4} color='warning'>
+                <StyledBadge
+                  badgeContent={this.props.countCartItems}
+                  color='warning'
+                >
                   <ShoppingCartOutlinedIcon color='white' />
                 </StyledBadge>
               </ListItem>
