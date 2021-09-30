@@ -47,10 +47,12 @@ export class Basket extends Component {
                   marginBottom: '1rem',
                 }}
               >
-                <Grid item sm={4}>
-                  <Typography variant='body1'>{item.name}</Typography>
+                <Grid item sm={5} sx={{ minWidth: '6rem' }}>
+                  <Typography variant='body1' component='span'>
+                    {item.name}
+                  </Typography>
                 </Grid>
-                <Grid item sm={4}>
+                <Grid item sm={3}>
                   <Button
                     variant='contained'
                     color='warning'
