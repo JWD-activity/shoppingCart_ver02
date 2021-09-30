@@ -30,12 +30,12 @@ export class Basket extends Component {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     return (
-      <Box className={this.props.classes.root}>
-        <aside>
-          {cartItems.length === 0 ? (
-            <Typography variant='body1'>Cart is empty!</Typography>
-          ) : (
-            cartItems.map((item) => (
+      <aside className={this.props.classes.root}>
+        {cartItems.length === 0 ? (
+          <Typography variant='body1'>Cart is empty!</Typography>
+        ) : (
+          <Grid container>
+            {cartItems.map((item) => (
               <Grid
                 container
                 key={item.id}
@@ -56,6 +56,7 @@ export class Basket extends Component {
                     color='warning'
                     disableElevation
                     className={this.props.classes.btn}
+                    onClick={() => onAdd(item)}
                   >
                     +
                   </Button>
@@ -63,6 +64,7 @@ export class Basket extends Component {
                     variant='contained'
                     disableElevation
                     className={this.props.classes.btn}
+                    onClick={() => onRemove(item)}
                   >
                     -
                   </Button>
@@ -73,10 +75,56 @@ export class Basket extends Component {
                   </Typography>
                 </Grid>
               </Grid>
-            ))
-          )}
-        </aside>
-      </Box>
+            ))}
+
+            <Grid
+              container
+              item
+              sx={{
+                justifyContent: 'space-between',
+                borderTop: '1px solid #f0f0f0',
+                paddingTop: '1rem',
+              }}
+            >
+              <Grid item>
+                <Typography variant='body1'>Item Price</Typography>
+              </Grid>
+              <Grid item>
+                <Typography>${itemsPrice.toFixed(2)}</Typography>
+              </Grid>
+            </Grid>
+
+            <Grid container item sx={{ justifyContent: 'space-between' }}>
+              <Grid item>
+                <Typography variant='body1'>Tax Price</Typography>
+              </Grid>
+              <Grid item>
+                <Typography>${taxPrice.toFixed(2)}</Typography>
+              </Grid>
+            </Grid>
+
+            <Grid container item sx={{ justifyContent: 'space-between' }}>
+              <Grid item>
+                <Typography variant='body1'>Shipping Price</Typography>
+              </Grid>
+              <Grid item>
+                <Typography>${shippingPrice.toFixed(2)}</Typography>
+              </Grid>
+            </Grid>
+
+            <Grid container item sx={{ justifyContent: 'space-between' }}>
+              <Grid item>
+                <Typography variant='subtitle2'>Total Price</Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant='subtitle2'>
+                  ${totalPrice.toFixed(2)}
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        )}
+      </aside>
     );
   }
 }

@@ -49,13 +49,13 @@ class App extends Component {
         this.state.cartItems.filter((item) => item.id !== product.id)
       );
     } else {
-      this.setState(
-        this.state.cartItems.map((item) =>
+      this.setState({
+        cartItems: this.state.cartItems.map((item) =>
           item.id === product.id
             ? { ...foundProduct, qty: foundProduct.qty - 1 }
             : item
-        )
-      );
+        ),
+      });
     }
   }
 
