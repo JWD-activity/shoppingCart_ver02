@@ -1,4 +1,3 @@
-# Shopping Cart version 02 (ShoppingCart_ver02)
 # Shopping Cart (ShoppingCart_ver02)
 [Click here to view the website](https://jwd-activity.github.io/shoppingCart_ver02/)
 
@@ -30,7 +29,7 @@
   - State
 
 ### What I learned
-- 
+- In **the shopping cart version 01 project**, I used **function components**, whereas, **in version 02**, I implemented a shopping cart using **class components**. throughout this implement, I learned the difference between the Class component and the Function component in react. 
 
 ### Screenshot
 - Desktop: 1440px
