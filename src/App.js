@@ -45,9 +45,11 @@ class App extends Component {
     );
 
     if (foundProduct.qty === 1) {
-      this.setState(
-        this.state.cartItems.filter((item) => item.id !== product.id)
-      );
+      this.setState({
+        cartItems: this.state.cartItems.filter(
+          (item) => item.id !== product.id
+        ),
+      });
     } else {
       this.setState({
         cartItems: this.state.cartItems.map((item) =>
