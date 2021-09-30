@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { withStyles } from '@mui/styles';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 const styles = {
   root: {
     backgroundColor: '#F7F8FD',
     borderRadius: 5,
     padding: '1rem',
+  },
+  btn: {
+    padding: 0,
+    minWidth: '1.5rem',
+    marginRight: '.2rem',
   },
 };
 
@@ -29,9 +36,43 @@ export class Basket extends Component {
             <Typography variant='body1'>Cart is empty!</Typography>
           ) : (
             cartItems.map((item) => (
-              <Typography key={item.id} variant='body1'>
-                {item.name}
-              </Typography>
+              <Grid
+                container
+                key={item.id}
+                spacing={0.5}
+                columns={12}
+                sx={{
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginBottom: '1rem',
+                }}
+              >
+                <Grid item sm={4}>
+                  <Typography variant='body1'>{item.name}</Typography>
+                </Grid>
+                <Grid item sm={4}>
+                  <Button
+                    variant='contained'
+                    color='warning'
+                    disableElevation
+                    className={this.props.classes.btn}
+                  >
+                    +
+                  </Button>
+                  <Button
+                    variant='contained'
+                    disableElevation
+                    className={this.props.classes.btn}
+                  >
+                    -
+                  </Button>
+                </Grid>
+                <Grid item sm={4}>
+                  <Typography align='right'>
+                    {item.qty} x ${item.price.toFixed(2)}
+                  </Typography>
+                </Grid>
+              </Grid>
             ))
           )}
         </aside>
